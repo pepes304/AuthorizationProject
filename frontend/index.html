@@ -42,7 +42,7 @@
       };
 
       try {
-        const response = await fetch("http://127.0.0.1:8000/register_user", {
+        const response = await fetch("http://192.168.1.6/register_user", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -55,6 +55,7 @@
         if (response.ok) {
           result.textContent = "Успішна реєстрація!";
           result.className = "text-green-600 text-center text-sm";
+          document.getElementById("registerForm").reset();
         } else {
           result.textContent = data.detail || "Сталася помилка";
           result.className = "text-red-600 text-center text-sm";
