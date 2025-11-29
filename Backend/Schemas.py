@@ -10,3 +10,4 @@ class UserCreate(BaseModel):
 class TokenCreate(BaseModel):
     nickname: str
     id: int
+
